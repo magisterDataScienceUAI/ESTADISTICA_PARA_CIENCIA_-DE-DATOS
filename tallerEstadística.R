@@ -214,9 +214,9 @@ View(M4)
 # no hay correlación significativa a mayor calidad del producto con un intervalo de 95%
 
 # pregunta 5---------------
-
-COMPRAS_POR_DIA <- ART %>% count(FECHA_COMPRA)
-lambda <- mean(COMPRAS_POR_DIA$n)
+library(dplyr)
+COMPRAS_POR_DIA <- ART %>% count("FECHA_COMPRA")
+lambda <- mean(COMPRAS_POR_DIA$freq)
 
 #0.9994002,es la probabilidad teorìca y 0,8 es la probabilidad Empirìca  
 
